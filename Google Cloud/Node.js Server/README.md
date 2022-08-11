@@ -1,5 +1,5 @@
 <h1>Info</h1>
-<p>Files for a Node.js express map server running over App Engine on Google Cloud.</p>
+<p>Files for a Node.js express map server running over App Engine on Google Cloud https://cloud.google.com/</p>
 
 <h1>Install Node.js</h1><br>
 <p>Go to https://nodejs.org/en/, choose your version, download, install.</p>
