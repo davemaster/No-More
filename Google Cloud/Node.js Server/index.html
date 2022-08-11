@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<!--
+ @license
+ Copyright 2019 Google LLC. All Rights Reserved.
+ SPDX-License-Identifier: Apache-2.0
+-->
+<html>
+  <head>
+    <title>NO MORE</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+
+    <link rel="stylesheet" type="text/css" href="./style.css" />
+    <script src="./index.js"> defer</script>
+    
+  </head>
+  <body onload="processJavascript();">
+    <h3 id="para">NO MORE - DaveWare Sentinel</h3>
+    <!--The div element for the map -->
+    <div id="map"></div>
+
+    <!-- 
+     The `defer` attribute causes the callback to execute after the full HTML
+     document has been parsed. For non-blocking uses, avoiding race conditions,
+     and consistent behavior across browsers, consider loading using Promises
+     with https://www.npmjs.com/package/@googlemaps/js-api-loader.
+    -->
+    <script async defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCCPuJBgWmUgjgRJ-XCTH1rhMED6hJxnzc&callback=initMap&v=weekly"
+      //src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDwAOa4ioAEK99OTXBlXJXvQRxAncDVp_U&callback=initMap&v=weekly"      
+    ></script>
+
+    <script>
+      var result = new Date().toString();
+      var appInventorInput = window.AppInventor.getWebViewString();
+      function processJavascript() 
+      {
+          if (appInventorInput.length > 0) 
+          {
+              /*
+              document.write( "WebView InputString received FROM app:" + appInventorInput );
+              result = appInventorInput.split("").reverse().join("");
+              document.write( "<p/>WebView InputString sending BACK TO app:<br/>" +
+              result );*/
+              changeColor('blue'); 
+          } 
+          else 
+          {
+              //document.write( "No WebView InputString set by app at: <br/>" + result );
+              changeColor('red'); 
+          }
+          window.AppInventor.setWebViewString( result );
+      }
+      function changeColor(newColor) 
+      {
+        var elem = document.getElementById('para');
+        elem.innerText='ahora si';
+        elem.style.color = newColor;
+      }
+     
+
+  </script>
+  
+  </body>
+</html>
