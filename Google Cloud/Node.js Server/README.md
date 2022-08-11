@@ -1,14 +1,15 @@
-<h1>Info</h1><br>
-Files for a Node.js express map server running over App Engine on Google Cloud.
+<h1>Info</h1>
+<p>Files for a Node.js express map server running over App Engine on Google Cloud.</p>
 
 <h1>Install Node.js</h1><br>
-Go to https://nodejs.org/en/, choose your version, download, install.
+<p>Go to https://nodejs.org/en/, choose your version, download, install.</p>
 
-<h1>Install express server</h1><br>
-Execute in a terminal, the following:
+<h1>Install express server</h1>
+<p>Execute in a terminal, the following:</p>
 
-$ mkdir your-project-folder
-$ cd your-project-folder
-$ npm init -y
-$ npm install express@4.17.1
-
+<ul>
+  <li>$ mkdir your-project-folder</li>
+  <li>$ cd your-project-folder</li>
+  <li>$ npm init -y</li>
+  <li>$ npm install express</li>
+</ul>
